@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Karla", sans-serif;
+}
+
+:root {
+  --color-green200: hsl(148, 38%, 91%);
+  --color-green600: hsl(169, 82%, 27%);
+  --color-red: hsl(0, 66%, 54%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-grey500: hsl(186, 15%, 59%);
+  --color-grey900: hsl(187, 24%, 22%);
+
+  --fontSize-base: 1rem;
+
+  --fontWeight-regular: 400;
+  --fontWeight-bold: 700;
+}
+
+body {
+  background-color: var(--color-green200);
+  color: var(--color-grey900);
+  font-weight: var(--fontWeight-regular);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+}
+
+main {
+  background-color: var(--color-white);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  padding: 2rem;
+  width: min(90%, 700px);
+}
+
+.successMessage {
+  display: none;
+  padding: 1rem;
+  background-color: var(--color-grey900);
+  border-radius: 0.5rem;
+  color: var(--color-white);
+  font-weight: var(--fontWeight-bold);
+  margin-bottom: 1rem;
+}
+
+img {
+  padding-right: 0.5rem;
+}
+
+.successMessage span {
+  font-size: 1.5rem;
+}
+
+.successMessage p {
+  font-weight: var(--fontWeight-regular);
+}
+
+form {
+  display: grid;
+  /* Criamos 2 colunas iguais */
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem; /* Espaçamento uniforme entre todos os grupos */
+}
+
+h1 {
+  color: var(--color-grey900);
+  padding-bottom: 1rem;
+}
+
+.errorMessage {
+  display: none;
+  color: var(--color-red);
+  font-size: 0.75rem;
+}
+
+.activeErrorMessage, .activeSuccessMessage {
+  display: block;
+}
+
+
+.input {
+  border: 0.063rem solid var(--color-grey500); /* 1px */
+  border-radius: 8px;
+
+  font-size: var(--fontSize-base);
+
+  cursor: pointer;
+  padding: 0.75rem;
+}
+
+.input-email,
+.queryType-fieldset,
+.textarea-message,
+.checkbox-group,
+.submit-button {
+  grid-column: span 2;
+
+}
+
+/* Estilo básico para os labels e inputs ficarem verticais */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Estilo para os rádios ficarem lado a lado dentro do fieldset */
+.queryType-fieldset {
+  border: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+legend {
+  margin-bottom: 0.5rem;
+}
+
+input {
+  color: var(--color-grey900);
+  cursor: pointer;
+
+  transition: transform 0.3s ease;
+}
+
+input:hover, textarea:hover {
+  transform: scale(1.02);
+
+  outline: 2px solid var(--color-green600);
+}
+
+label {
+  cursor: pointer;
+}
+
+.required::after {
+    content: " *";
+    color: var(--color-green600); 
+    margin-left: 4px;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--color-green600);
+}
+
+.radio-group:focus-within {
+  border: 2px solid var(--color-green600);
+  background-color: var(--color-green200);
+}
+
+.inputRadio,
+.inputCheckbox {
+  accent-color: var(--color-green600);
+
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+.inputRadio:focus {
+  outline: none;
+}
+
+.submit-button {
+    background-color: var(--color-green600);
+    border: none;
+    border-radius: 8px;
+    color: var(--color-white);
+    cursor: pointer;
+    font-size: var(--fontSize-base);
+    font-weight: var(--fontWeight-bold);
+    padding: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: var(--color-grey900);
+    transform: scale(1.05);
+}
+
+.submit-button:active {
+    transform: scale(0.95);
+}
