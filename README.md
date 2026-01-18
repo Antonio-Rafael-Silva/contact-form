@@ -8,7 +8,7 @@ Essa é uma solução para o [Desafio Formulário de Contato no Frontend Mentor]
 
 ## 💻 Projeto
 
-Este projeto é um formulário de contato, onde há diversos inputs e mensagens de erro. É importante frizar que os dados no formulário <strong>**não são coletados e não vão para lugar nenhum**</strong>
+Este projeto é um formulário de contato, onde há diversos inputs e mensagens de erro. É importante frizar que os dados no formulário <strong>**não são coletados.**</strong>
 
 ## 🚀 Tecnologias
 
