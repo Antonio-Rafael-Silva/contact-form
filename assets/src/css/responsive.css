@@ -1,0 +1,40 @@
+@media (max-width: 768px) {
+  main {
+    width: 95%;
+    margin: 2rem 0; 
+    padding: 1.5rem; 
+  }
+
+  body {
+    height: auto; 
+    align-items: flex-start; 
+    padding-top: 2rem;
+  }
+
+  form {
+
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .input-email,
+  .queryType-fieldset,
+  .textarea-message,
+  .checkbox-group,
+  .submit-button {
+
+    grid-column: span 1;
+  }
+
+  .queryType-fieldset {
+
+    grid-template-columns: 1fr;
+  }
+
+
+  .checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
